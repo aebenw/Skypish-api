@@ -3,6 +3,8 @@
 
 
 Change url based on ngrok url in  index.js on front end and  change it on config/environments/development.rb
+This will allow it to be used in another person's computer
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
