@@ -1,5 +1,9 @@
 # README
 
+
+
+Change url based on ngrok url in  index.js on front end and  change it on config/environments/development.rb
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
