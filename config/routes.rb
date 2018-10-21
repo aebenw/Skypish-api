@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   mount ActionCable.server => '/cable'
 
   root 'conversations#index'
+  #lets see if this works now
 end
