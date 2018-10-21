@@ -8,11 +8,10 @@ class UsersController < ApplicationController
 
 
   def show
-
-    if User.find_by(email: params[:id].downcase)
-      @user = User.find_by(email: params[:id].downcase)
+    if User.find_by(name: params[:id].downcase)
+      @user = User.find_by(name: params[:id].downcase)
     else
-      @user = User.create(email: params[:id].downcase)
+      @user = User.create(name: params[:id].downcase)
     end
     render json: @user, status: 200
   end

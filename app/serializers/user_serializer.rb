@@ -1,4 +1,9 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :email
-  # has_many :conversations
+  attributes :email, :name
+  has_many :conversations
+
+  def conversations
+    Conversation.participating(object)
+  end
+
 end
