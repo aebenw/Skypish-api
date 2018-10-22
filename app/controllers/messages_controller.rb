@@ -1,9 +1,14 @@
 class MessagesController < ApplicationController
+
+  def index
+    @messages = Message.all
+    render json: @messages
+  end
   def create
     message = Message.new(message_params)
-    byebug
     conversation = Conversation.find(message_params[:conversation_id])
     if message.save
+      # byebug
       serialized_data = ActiveModelSerializers::Adapter::Json.new(
         MessageSerializer.new(message)
       ).serializable_hash
@@ -15,6 +20,6 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:text, :conversation_id)
+    params.require(:message).permit(:text, :conversation_id, :user_id)
   end
 end
