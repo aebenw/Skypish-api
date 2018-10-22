@@ -21,3 +21,7 @@ Message.create(user_id: 2, conversation_id: 1, text: "Cool")
 # Conversation.create(title: "good day")
 #
 # eben.active_relationships.create(received_id: juan.id)
+nisha = User.create(name: "nisha", email: "nisha@nisha.com")
+joshua = User.create(name: "joshua", email: "joshua@joshua.com")
+gina = User.create(name: "gina", email: "gina@gina.com")
+blavin = User.create(name: "blavin", email: "blavin@blavin.com")
