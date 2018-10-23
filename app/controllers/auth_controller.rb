@@ -13,4 +13,15 @@ class AuthController < ApplicationController
     end
   end
 
+  def show
+  token = request.headers["Authorization"]
+  decoded_token = decode(token)
+  user = User.find(decoded_token[0]["jwt"])
+
+  render json: user
+
+
+
+  end
+
 end

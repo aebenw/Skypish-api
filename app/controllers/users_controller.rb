@@ -16,6 +16,11 @@ class UsersController < ApplicationController
   #   render json: @user, status: 200
   # end
 
+  def create
+    @user = User.create(user_params)
+    render json: @user
+  end
+
 
   def followers
     @user = User.find_by(name:params[:currentU])
@@ -36,6 +41,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :password, :id)
+    params.require(:user).permit(:name,:email, :password)
   end
 end

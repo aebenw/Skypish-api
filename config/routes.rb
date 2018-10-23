@@ -11,5 +11,6 @@ Rails.application.routes.draw do
 
   post  '/followers', to: 'users#followers'
   post '/auth', to: 'auth#create'
+  get '/current_user', to: 'auth#show'
 
 end
