@@ -1,7 +1,8 @@
 class User < ApplicationRecord
   # validates :email, presence: true
   # validates :password, length: { in: 6..20 }
-
+  has_secure_password
+  
   has_many :authored_conversations,  class_name:  "Conversation",
                                    foreign_key: "author_id",
                                    dependent:   :destroy

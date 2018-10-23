@@ -7,14 +7,14 @@ class UsersController < ApplicationController
   end
 
 
-  def show
-    if User.find_by(name: params[:id].downcase)
-      @user = User.find_by(name: params[:id].downcase)
-    else
-      @user = User.create(name: params[:id].downcase)
-    end
-    render json: @user, status: 200
-  end
+  # def show
+  #   if User.find_by(name: params[:id].downcase)
+  #     @user = User.find_by(name: params[:id].downcase)
+  #   else
+  #     @user = User.create(name: params[:id].downcase)
+  #   end
+  #   render json: @user, status: 200
+  # end
 
 
   def followers
