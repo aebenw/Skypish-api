@@ -17,6 +17,7 @@ class AuthController < ApplicationController
   token = request.headers["Authorization"]
   decoded_token = decode(token)
   user = User.find(decoded_token[0]["jwt"])
+  byebug
 
   render json: user
 
