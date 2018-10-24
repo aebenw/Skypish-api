@@ -27,7 +27,10 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-  config.action_cable.url = 'ws://hidden-fortress-58788.herokuapp.com/cable'
+  # config.action_cable.url = 'ws://hidden-fortress-58788.herokuapp.com/cable'
+  # config.action_cable.allowed_request_origins = [/http:\/\/*/, /https:\/\/*/]
+
+  config.action_cable.url = 'ws://localhost:3000/cable'
   config.action_cable.allowed_request_origins = [/http:\/\/*/, /https:\/\/*/]
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
