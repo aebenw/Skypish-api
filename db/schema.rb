@@ -27,6 +27,11 @@ ActiveRecord::Schema.define(version: 2018_10_21_190102) do
 
   create_table "messages", force: :cascade do |t|
     t.string "text"
+    t.string "kind"
+    t.string "from"
+    t.string "to"
+    t.string "sdp"
+    t.string "candidate"
     t.bigint "conversation_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
