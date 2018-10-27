@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+  url: redis://redistogo:c7dce351850ebad1ad7d1f07bf38ba39@spinyfin.redistogo.com:11147/
   channel_prefix: SkypeWannaBe_production

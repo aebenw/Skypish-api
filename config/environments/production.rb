@@ -40,7 +40,8 @@ Rails.application.configure do
 
 
   config.action_cable.url = 'wss://gentle-refuge-17696.herokuapp.com/cable'
-  config.action_cable.allowed_request_origins = [/http:\/\/*/, /https:\/\/*/, 'https://frontendskype.herokuapp.com/', 'https://frontendskype.herokuapp.com/']
+
+  config.action_cable.allowed_request_origins = [/http:\/\/*/, /https:\/\/*/, 'https://frontendskype.herokuapp.com/', 'http://frontendskype.herokuapp.com/']
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
