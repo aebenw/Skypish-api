@@ -29,8 +29,8 @@ Rails.application.configure do
 
   # config.action_cable.url = 'ws://hidden-fortress-58788.herokuapp.com/cable'
   # config.action_cable.allowed_request_origins = [/http:\/\/*/, /https:\/\/*/]
-
-  config.action_cable.url = 'ws://localhost:3000/cable'
+# https://gentle-refuge-17696.herokuapp.com/
+  config.action_cable.url = 'wss://gentle-refuge-17696.herokuapp.com/cable'
   config.action_cable.allowed_request_origins = [/http:\/\/*/, /https:\/\/*/]
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
