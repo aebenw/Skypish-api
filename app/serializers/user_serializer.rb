@@ -1,7 +1,7 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :email, :name, :id
+  attributes :email, :name, :id, :inactive
   has_many :conversations
-  has_many :inactive
+
 
 
   def conversations
