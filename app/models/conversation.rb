@@ -9,10 +9,5 @@ class Conversation < ApplicationRecord
     where("(conversations.author_id = ? OR conversations.receiver_id = ?)", user.id, user.id)
   end
 
-  # def self.participating(user)
-  #   self.all.select {|conv| conv.author_id == user.id || conv.receiver_id == user.id}
-  # end
-
-
   has_many :messages
 end
