@@ -9,8 +9,8 @@ class UserSerializer < ActiveModel::Serializer
   end
 
   def inactive
-    reg = incoming + outgoing
-    dif = (User.all - [self]) - reg
+    reg = object.incoming + object.outgoing
+    dif = (User.all - [object]) - reg
     return dif
   end
 
