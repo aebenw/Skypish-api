@@ -1,57 +1,16 @@
-# README
+# Welcome to Skypish!
 
+This is a video sharing and live messaging application. It allows two computers (on the same wifi network) to video chat with each other and send each other messages.
 
+*The APP is very buggy and needs more work, it was built in a 4 day code sprint. The video and messaging were the prime focus for the project, so pardon the presentation*
 
-Change url based on ngrok url in  index.js on front end and  change it on config/environments/development.rb
-This will allow it to be used in another person's computer
+To test the app you can log in in two tabs with two users, or on two separate computers -
+  eben@eben.com
+  juan@juan.com
+  pass: test.
 
-
-
-
-Eben's changes:
-
-
-
-Eben's TODO's:
-
-
-
-
-
-Eben General Notes:
-*FOR NOW JUST USING FIRST NAME AS A SIGN IN*
-~ Better authentication needs be set up, waiting for our auth lecture on Monday to do so.
-~ Planning on just starting off where if you have an account you show up on a list that anyone else with an account can see and start up a conversation
-
-
-
-
-
-
-
-
-
-
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Tech Specks
+  -Uses React for Front End and Rails for backend 
+  -PostgreSQL for DB
+  -Communicates messages and video information using ActionCable which uses Websockets and Redis.
+  -Acompishes a peer to peer video connection with WebRTC.
