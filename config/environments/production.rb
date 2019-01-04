@@ -35,11 +35,13 @@ Rails.application.configure do
 
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
-  # config.action_cable.url = 'ws://localhost:3001/cable'
-  # config.action_cable.allowed_request_origins = '*'
+  # config.action_cable.url = 'wss://localhost:3001/cable'
+  config.action_cable.url = 'wss://56f8b07f.ngrok.io/cable'
 
+  config.action_cable.allowed_request_origins = '*'
 
-  config.action_cable.url = 'wss://gentle-refuge-17696.herokuapp.com/cable'
+  # ** FOLLOWING LINE NEEDS TO BE ENABLED FOR PRODUCTION ** #
+  # config.action_cable.url = 'wss://gentle-refuge-17696.herokuapp.com/cable'
 
   config.action_cable.allowed_request_origins = [/http:\/\/*/, /https:\/\/*/, 'https://frontendskype.herokuapp.com/', 'http://frontendskype.herokuapp.com/']
 

@@ -2,7 +2,7 @@ class AuthController < ApplicationController
 
   def create
     @user = User.find_by(email: params[:email])
-    if @user && @user.authenticate(params[:password]) ## Authenticate is a part of has_secure_password
+    if @user && @user.authenticate(params[:password])
       serialized_data = ActiveModelSerializers::Adapter::Json.new(
         UserSerializer.new(@user)
       ).serializable_hash
@@ -14,14 +14,16 @@ class AuthController < ApplicationController
   end
 
   def show
-  token = request.headers["Authorization"]
-  decoded_token = decode(token)
-  user = User.find(decoded_token[0]["jwt"])
 
+    token = request.headers["Authorization"]
+    decoded_token = decode(token)[0]["jwt"]
+    user = User.find_by(id: decoded_token)
 
-  render json: user
-
-
+    if user
+      render json: user
+    else
+      render json: {error: 'Invalid token'}, status: 401
+    end
 
   end
 

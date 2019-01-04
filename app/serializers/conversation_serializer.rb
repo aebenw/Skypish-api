@@ -3,9 +3,9 @@ class ConversationSerializer < ActiveModel::Serializer
   has_many  :messages
 
 
-  # def message_with_author
-  #   object.messages.map {|mess| User.find(mess.user_id).name}
-  #
-  # end
+  def messages
+    object.messages.map {|mess| ShallowMessageSerializer.new(mess)}
+  
+  end
 
 end
