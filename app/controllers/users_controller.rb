@@ -9,8 +9,14 @@ class UsersController < ApplicationController
 
 
   def create
+    byebug
     @user = User.create(user_params)
-    render json: @user
+    serialized_data = ActiveModelSerializers::Adapter::Json.new(
+      UserSerializer.new(@user)
+    ).serializable_hash
+    token = issue_token({jwt: @user.id})
+
+    render json: {jwt: token, current_user: serialized_data}
   end
 
 

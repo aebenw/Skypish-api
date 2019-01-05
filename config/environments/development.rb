@@ -32,10 +32,11 @@ Rails.application.configure do
 # https://gentle-refuge-17696.herokuapp.com/
 
   #**********NEED TO COMMENT OUT FOR PRODUCTION **********//
-  config.action_cable.url = 'wss://gentle-refuge-17696.herokuapp.com/cable'
+  # config.action_cable.url = 'wss://gentle-refuge-17696.herokuapp.com/cable'
   # *********UNCOMMENT BELOW FOR LOCAL *******************//
+  config.action_cable.url = 'wss://a93f916c.ngrok.io/cable'
+  # ********************************* //
 
-  # config.action_cable.url = 'wss://ba844288.ngrok.io/cable'
   config.action_cable.allowed_request_origins = [/http:\/\/*/, /https:\/\/*/]
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
