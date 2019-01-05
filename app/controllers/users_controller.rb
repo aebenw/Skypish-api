@@ -9,7 +9,6 @@ class UsersController < ApplicationController
 
 
   def create
-    byebug
     @user = User.create(user_params)
     serialized_data = ActiveModelSerializers::Adapter::Json.new(
       UserSerializer.new(@user)
