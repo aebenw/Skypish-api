@@ -12,11 +12,10 @@ Conversation.create(author_id: lindsay.id, receiver_id: eben.id)
 Conversation.create(author_id: peter.id, receiver_id: jason.id)
 
 
-
+Message.create(user_id: 1, conversation_id: 1, text: "Hey Juan")
 Message.create(user_id: 1, conversation_id: 1, text: "what's up?")
 Message.create(user_id: 2, conversation_id: 1, text: "Not Much")
-Message.create(user_id: 1, conversation_id: 1, text: "Hello")
-Message.create(user_id: 2, conversation_id: 1, text: "Cool")
+Message.create(user_id: 2, conversation_id: 1, text: "What's up with you?")
 # Conversation.create(title: "what's up")
 # Conversation.create(title: "good day")
 #
